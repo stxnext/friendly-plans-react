@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
-
 import { Card, IconButton, ModalTrigger, TextInput } from 'components';
 import { FormikProps } from 'formik';
 import { i18n } from 'locale';
 import { PlanElement, PlanItem, Student } from 'models';
+import React, { useState } from 'react';
+import { SafeAreaView, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { dimensions, palette, typography } from 'styles';
+
 import { ImagePicker } from './ImagePicker';
 import { PlanItemFormData } from './PlanItemForm';
 import { TimeSlider } from './TimeSlider';
@@ -57,7 +57,12 @@ export class SimpleTask extends React.PureComponent<Props, State> {
             <ModalTrigger
               title={i18n.t('simpleTask:setTimer')}
               modalContent={
-                <TimeSlider min={1} max={60} onConfirm={this.handleConfirmTimer} savedTime={this.state.selectedTime} />
+                <TimeSlider
+                  min={1}
+                  max={60}
+                  onConfirm={this.handleConfirmTimer}
+                  savedTime={this.state.selectedTime}
+                />
               }
             >
               <IconButton

@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme';
+import { i18n } from 'locale';
 import React from 'react';
 import { Alert } from 'react-native';
 import firebase from 'react-native-firebase';
-
-import { i18n } from 'locale';
 import { NavigationService } from 'services';
+
 import { ResetPasswordForm } from '../ResetPasswordForm';
 
 describe('ResetPasswordForm', () => {

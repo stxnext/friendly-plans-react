@@ -1,6 +1,5 @@
 import React, { SFC } from 'react';
 import { StyleSheet, View } from 'react-native';
-
 import { dimensions, palette } from 'styles';
 
 interface Props {

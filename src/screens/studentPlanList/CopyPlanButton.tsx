@@ -2,7 +2,7 @@ import { FlatButton } from 'components';
 import { i18n } from 'locale';
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { dimensions, palette } from 'styles';
+import { palette } from 'styles';
 
 export class CopyPlanButton extends React.PureComponent {
   render() {

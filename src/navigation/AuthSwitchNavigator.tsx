@@ -1,9 +1,9 @@
 import { createSwitchNavigator } from 'react-navigation';
-
 import { WelcomeScreen } from 'screens';
+
 import { MainDrawerNavigator } from './MainDrawerNavigator';
-import { Route } from './routes';
 import { UnauthenticatedStackNavigator } from './UnauthenticatedStackNavigator';
+import { Route } from './routes';
 
 export const AuthSwitchNavigator = createSwitchNavigator({
   [Route.Welcome]: WelcomeScreen,

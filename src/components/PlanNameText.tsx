@@ -1,7 +1,6 @@
+import { StyledText } from 'components';
 import React, { SFC } from 'react';
 import { StyleSheet } from 'react-native';
-
-import { StyledText } from 'components';
 import { palette, typography } from 'styles';
 
 interface Props {

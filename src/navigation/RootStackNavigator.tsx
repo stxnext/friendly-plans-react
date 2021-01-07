@@ -1,6 +1,5 @@
 import { Animated, Easing } from 'react-native';
 import { createStackNavigator, NavigationSceneRendererProps } from 'react-navigation';
-
 import {
   DialogScreen,
   StudentCreateScreen,
@@ -8,6 +7,7 @@ import {
   StudentsListScreen,
   StudentsListSearchScreen,
 } from 'screens';
+
 import { AuthSwitchNavigator } from './AuthSwitchNavigator';
 import { Route } from './routes';
 

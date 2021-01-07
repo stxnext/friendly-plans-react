@@ -1,4 +1,5 @@
 import { ViewStyle } from 'react-native';
+
 import { palette } from './palette';
 
 export const getElevation = (elevation: number): ViewStyle => ({

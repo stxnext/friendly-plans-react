@@ -24,4 +24,6 @@ export const palette = {
   shadow: 'rgba(0, 0, 0, 0.7)',
   welcomeBackground: '#F0F0FD',
   shadowPurple: '#1E169423',
+  white: '#fff',
+  transparent: 'rgba(0, 0, 0, 0)',
 };

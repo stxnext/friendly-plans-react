@@ -1,8 +1,8 @@
-import React from 'react';
-
 import { i18n } from 'locale';
 import { PlanItem, PlanItemType } from 'models';
+import React from 'react';
 import { NavigationInjectedProps } from 'react-navigation';
+
 import { PlanItemForm, PlanItemFormData } from './PlanItemForm';
 
 interface State {
@@ -30,7 +30,12 @@ export class PlanItemTaskScreen extends React.PureComponent<NavigationInjectedPr
   createPlanItem = async (data: PlanItemFormData) => {
     const plan = this.props.navigation.getParam('plan');
 
-    const planItem = await PlanItem.createPlanItem(plan, PlanItemType.SimpleTask, data, this.getLastItemOrder());
+    const planItem = await PlanItem.createPlanItem(
+      plan,
+      PlanItemType.SimpleTask,
+      data,
+      this.getLastItemOrder(),
+    );
 
     this.setState({ planItem });
   };

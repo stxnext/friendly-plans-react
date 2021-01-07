@@ -1,9 +1,8 @@
+import { Icon, StyledText } from 'components';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-
-import { Icon, StyledText } from 'components';
-
 import Sound from 'react-native-sound';
+
 import sounds from '../../assets/sounds/sounds';
 
 interface Props {
@@ -19,7 +18,7 @@ interface State {
 export class PlanItemTimer extends React.PureComponent<Props, State> {
   timerID: any;
   soundTrack: any;
-  maxLoop: number = 3;
+  maxLoop = 3;
 
   state: Readonly<State> = {
     itemTime: this.props.itemTime,
@@ -32,7 +31,7 @@ export class PlanItemTimer extends React.PureComponent<Props, State> {
 
   itemTimeText = () => this.minutes() + ':' + this.seconds();
 
-  componentWillReceiveProps(nextProps: Props) {
+  UNSAFE_componentWillReceiveProps(nextProps: Props) {
     this.setState({ itemTime: nextProps.itemTime });
   }
 
@@ -49,7 +48,7 @@ export class PlanItemTimer extends React.PureComponent<Props, State> {
   }
 
   initializeAlarm = () => {
-    this.soundTrack = new Sound(sounds.timerEndOfTime, Sound.MAIN_BUNDLE, error => {
+    this.soundTrack = new Sound(sounds.timerEndOfTime, Sound.MAIN_BUNDLE, (error) => {
       if (error) {
         this.setState({ isPlaying: false });
       }
@@ -77,7 +76,7 @@ export class PlanItemTimer extends React.PureComponent<Props, State> {
   };
 
   decreaseTime() {
-    this.setState(state => ({ itemTime: state.itemTime - 1 }));
+    this.setState((state) => ({ itemTime: state.itemTime - 1 }));
   }
 
   tick = () => {

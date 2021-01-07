@@ -1,12 +1,12 @@
-import { Formik, FormikProps } from 'formik';
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import * as Yup from 'yup';
-
 import { IconButton, IconToggleButton, StyledText, TextInput } from 'components';
+import { Formik, FormikProps } from 'formik';
 import { i18n } from 'locale';
 import { PlanItem, PlanItemType } from 'models';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { dimensions, getElevation, palette, typography } from 'styles';
+import * as Yup from 'yup';
+
 import { ComplexTask } from './ComplexTask';
 import { SimpleTask } from './SimpleTask';
 
@@ -79,7 +79,9 @@ export class PlanItemForm extends React.PureComponent<Props, State> {
               onChangeText={handleChange('name')}
               onEndEditing={submitForm}
             />
-            {errors.name && touched.name && <StyledText style={styles.errorMessage}>{errors.name}</StyledText>}
+            {errors.name && touched.name && (
+              <StyledText style={styles.errorMessage}>{errors.name}</StyledText>
+            )}
           </View>
           <View style={styles.buttonsContainer}>
             <IconToggleButton
@@ -97,7 +99,11 @@ export class PlanItemForm extends React.PureComponent<Props, State> {
           </View>
         </View>
         {this.state.taskType === PlanItemType.SimpleTask ? (
-          <SimpleTask style={styles.simpleTaskContainer} planItem={this.props.planItem} formikProps={formikProps} />
+          <SimpleTask
+            style={styles.simpleTaskContainer}
+            planItem={this.props.planItem}
+            formikProps={formikProps}
+          />
         ) : (
           <ComplexTask planItem={this.props.planItem} formikProps={formikProps} />
         )}

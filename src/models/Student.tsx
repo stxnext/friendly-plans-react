@@ -28,7 +28,8 @@ export interface StudentData {
 }
 
 export class Student implements SubscribableModel, StudentData {
-  static create = (data: StudentData): Promise<RNFirebase.firestore.DocumentReference> => getStudentsRef().add(data);
+  static create = (data: StudentData): Promise<RNFirebase.firestore.DocumentReference> =>
+    getStudentsRef().add(data);
 
   id!: string;
   name: string;

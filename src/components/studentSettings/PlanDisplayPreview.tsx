@@ -1,9 +1,9 @@
 import { i18n } from 'locale';
+import { StudentDisplayOption } from 'models';
 import React, { SFC } from 'react';
 import { Image, StyleSheet, View } from 'react-native';
-
-import { StudentDisplayOption } from 'models';
 import { dimensions, getElevation, palette } from 'styles';
+
 import { PlanNameText } from '../PlanNameText';
 
 interface Props {
@@ -14,7 +14,10 @@ interface Props {
 
 export const PlanDisplayPreview: SFC<Props> = ({ displaySettings, textSize, isUpperCase }) => {
   const renderImage = () => {
-    if (displaySettings !== StudentDisplayOption.TextSlide && displaySettings !== StudentDisplayOption.TextList) {
+    if (
+      displaySettings !== StudentDisplayOption.TextSlide &&
+      displaySettings !== StudentDisplayOption.TextList
+    ) {
       return <Image style={styles.planImage} source={require('../../assets/images/kids-playing.png')} />;
     }
 
@@ -37,11 +40,20 @@ export const PlanDisplayPreview: SFC<Props> = ({ displaySettings, textSize, isUp
   };
 
   const isListPreview =
-    displaySettings === StudentDisplayOption.ImageWithTextList || displaySettings === StudentDisplayOption.TextList;
+    displaySettings === StudentDisplayOption.ImageWithTextList ||
+    displaySettings === StudentDisplayOption.TextList;
 
   const planCardStyles = [styles.planCard, isListPreview && styles.planCardList];
-  const firstCardStyles = [...planCardStyles, styles.firstPlanCard, isListPreview && styles.firstPlanCardList];
-  const secondCardStyles = [...planCardStyles, styles.secondPlanCard, isListPreview && styles.secondPlanCardList];
+  const firstCardStyles = [
+    ...planCardStyles,
+    styles.firstPlanCard,
+    isListPreview && styles.firstPlanCardList,
+  ];
+  const secondCardStyles = [
+    ...planCardStyles,
+    styles.secondPlanCard,
+    isListPreview && styles.secondPlanCardList,
+  ];
 
   return (
     <View style={styles.previewContainer}>

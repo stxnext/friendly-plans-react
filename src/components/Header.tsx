@@ -1,11 +1,11 @@
+import { Student } from 'models';
+import { Route } from 'navigation';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { HeaderProps } from 'react-navigation';
-
-import { Student } from 'models';
-import { Route } from 'navigation';
 import { NavigationService } from 'services';
 import { dimensions, getElevation, headerHeight, palette, typography } from 'styles';
+
 import { IconButton } from './IconButton';
 import { StyledText } from './StyledText';
 

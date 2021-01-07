@@ -1,9 +1,9 @@
 import { FormikProps } from 'formik';
+import { PlanItem } from 'models';
 import React, { SFC } from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
-
-import { PlanItem } from 'models';
 import { dimensions, palette } from 'styles';
+
 import { ComplexTaskItem } from './ComplexTaskItem';
 import { PlanItemFormData } from './PlanItemForm';
 import { SimpleTask } from './SimpleTask';

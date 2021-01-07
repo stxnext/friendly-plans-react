@@ -1,12 +1,11 @@
-import React from 'react';
-import { Alert, StyleSheet, TouchableHighlight, View } from 'react-native';
-import Swipeable from 'react-native-gesture-handler/Swipeable';
-import { NavigationInjectedProps, withNavigation } from 'react-navigation';
-
 import PlayButton, { Card, Emoji, Icon, StyledText } from 'components';
 import { i18n } from 'locale';
 import { ModelSubscriber, Plan, Student } from 'models';
 import { Route } from 'navigation';
+import React from 'react';
+import { Alert, StyleSheet, TouchableHighlight, View } from 'react-native';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
+import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 import { dimensions, palette, typography } from 'styles';
 
 interface Props extends NavigationInjectedProps {
@@ -28,7 +27,9 @@ export class StudentPlanListItem extends React.PureComponent<Props, State> {
   };
 
   componentDidMount() {
-    this.studentSubscriber.subscribeElementUpdates(this.props.student, student => this.setState({ student }));
+    this.studentSubscriber.subscribeElementUpdates(this.props.student, (student) =>
+      this.setState({ student }),
+    );
   }
 
   componentWillUnmount() {

@@ -1,7 +1,6 @@
-import React from 'react';
-
 import { SwitchItem } from 'components';
 import { i18n } from 'locale';
+import React from 'react';
 
 interface Props {
   value: boolean;

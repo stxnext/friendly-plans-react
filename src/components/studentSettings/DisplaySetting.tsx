@@ -1,8 +1,7 @@
-import React, { PureComponent } from 'react';
-
 import { FixedValueSlider } from 'components';
 import { i18n } from 'locale';
 import { StudentDisplayOption } from 'models';
+import React, { PureComponent } from 'react';
 
 interface Props {
   value: StudentDisplayOption;

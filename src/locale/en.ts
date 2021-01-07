@@ -139,7 +139,8 @@ const translations = {
     removeStudent: 'Remove student',
     createStudent: 'Create student',
     deleteStudent: 'Delete Student',
-    deleteMessage: 'Deleting a user is irreversible. It also means deleting all plans and tasks assigned to it.',
+    deleteMessage:
+      'Deleting a user is irreversible. It also means deleting all plans and tasks assigned to it.',
     delete: 'Delete',
     cancel: 'Cancel',
   },

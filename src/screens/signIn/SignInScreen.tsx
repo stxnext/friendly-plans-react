@@ -1,10 +1,9 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
 import { Button, FullScreenTemplate, StyledText } from 'components';
 import { i18n } from 'locale';
 import { Route } from 'navigation';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NavigationInjectedProps } from 'react-navigation';
 import { palette, typography } from 'styles';
 
 import { SignInBackground } from './SignInBackground';
@@ -36,18 +35,6 @@ export class SignInScreen extends React.PureComponent<NavigationInjectedProps> {
 
 const styles = StyleSheet.create({
   container: { width: 272, marginHorizontal: 'auto', alignSelf: 'center' },
-  signUpTip: {
-    ...typography.caption,
-    color: palette.textDisabled,
-    textAlign: 'center',
-    marginTop: 4,
-  },
-  anonymousTip: {
-    ...typography.caption,
-    color: palette.textDisabled,
-    textAlign: 'center',
-    marginTop: 20,
-  },
   fullScreen: {
     backgroundColor: palette.welcomeBackground,
   },

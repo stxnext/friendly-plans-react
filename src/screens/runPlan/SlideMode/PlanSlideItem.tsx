@@ -1,9 +1,9 @@
-import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
-
 import { PlanNameText } from 'components';
 import { PlanItem, StudentDisplayOption } from 'models';
+import React from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 import { palette } from 'styles';
+
 import { PlanItemTimer } from '../PlanItemTimer';
 
 interface Props {
@@ -22,7 +22,9 @@ export class PlanSlideItem extends React.PureComponent<Props> {
 
   get showImage(): boolean {
     const { type } = this.props;
-    return type === StudentDisplayOption.ImageWithTextSlide || type === StudentDisplayOption.LargeImageSlide;
+    return (
+      type === StudentDisplayOption.ImageWithTextSlide || type === StudentDisplayOption.LargeImageSlide
+    );
   }
 
   render() {
@@ -45,7 +47,7 @@ export class PlanSlideItem extends React.PureComponent<Props> {
             textSize={this.props.textSize}
           />
         )}
-        {!!this.props.planItem.time ? <PlanItemTimer itemTime={this.props.planItem.time} /> : null}
+        {this.props.planItem.time ? <PlanItemTimer itemTime={this.props.planItem.time} /> : null}
       </View>
     );
   }
@@ -66,8 +68,5 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-  },
-  nameTextColor: {
-    color: palette.textBlack,
   },
 });

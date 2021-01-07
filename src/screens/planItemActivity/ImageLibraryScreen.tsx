@@ -1,9 +1,8 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-
 import { Card, FullScreenTemplate, StyledText } from 'components';
 import { i18n } from 'locale';
 import { PlanItem } from 'models';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import { dimensions } from 'styles';
 
 interface Props {

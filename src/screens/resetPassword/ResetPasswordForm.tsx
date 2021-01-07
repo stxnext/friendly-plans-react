@@ -1,13 +1,13 @@
+import { Button, InputItem } from 'components';
 import { Formik, FormikProps } from 'formik';
+import { i18n } from 'locale';
+import { Route } from 'navigation';
 import React from 'react';
 import { Alert, StyleSheet, View } from 'react-native';
 import firebase from 'react-native-firebase';
-import * as Yup from 'yup';
-
-import { Button, InputItem } from 'components';
-import { i18n } from 'locale';
-import { Route } from 'navigation';
 import { NavigationService } from 'services';
+import { palette } from 'styles';
+import * as Yup from 'yup';
 
 const validationSchema = Yup.object().shape({
   email: Yup.string()
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
   inputContainer: { borderWidth: 0, marginBottom: 12, width: 272 },
   input: {
-    backgroundColor: 'white',
+    backgroundColor: palette.white,
     borderRadius: 12,
     height: 44,
   },

@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { IconProps, Slider } from 'react-native-elements';
-
 import { dimensions, palette, typography } from 'styles';
+
 import { Icon } from './Icon';
 import { StyledText } from './StyledText';
 
@@ -26,7 +26,7 @@ interface State {
 export class FixedValueSlider extends React.PureComponent<Props, State> {
   constructor(props: Props) {
     super(props);
-    const selectedOption = props.options.find(item => item.value === props.value)!;
+    const selectedOption = props.options.find((item) => item.value === props.value)!;
     this.state = {
       index: selectedOption ? props.options.indexOf(selectedOption) : 0,
     };
@@ -52,7 +52,10 @@ export class FixedValueSlider extends React.PureComponent<Props, State> {
           <View style={styles.sliderInnerContainer}>
             <View style={styles.pointsContainer}>
               {options.map((_, index) => (
-                <View key={index} style={[styles.point, index === this.state.index && styles.pointSelected]} />
+                <View
+                  key={index}
+                  style={[styles.point, index === this.state.index && styles.pointSelected]}
+                />
               ))}
             </View>
             <Slider

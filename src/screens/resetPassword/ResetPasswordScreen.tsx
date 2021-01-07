@@ -1,8 +1,7 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-
 import { FullScreenTemplate, StyledText } from 'components';
 import { i18n } from 'locale';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import { palette, typography } from 'styles';
 
 import { ResetPasswordBackground } from './ResetPasswordBackground';

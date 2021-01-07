@@ -1,7 +1,6 @@
+import { Icon } from 'components';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-
-import { Icon } from 'components';
 import { palette } from 'styles';
 
 export class AppLogo extends React.PureComponent {

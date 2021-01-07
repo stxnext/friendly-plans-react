@@ -1,10 +1,9 @@
+import { i18n } from 'locale';
+import { Route } from 'navigation';
 import React from 'react';
 import { ScrollView } from 'react-native';
 import firebase from 'react-native-firebase';
 import { DrawerItem, DrawerItems, DrawerItemsProps, SafeAreaView } from 'react-navigation';
-
-import { i18n } from 'locale';
-import { Route } from 'navigation';
 
 type Props = DrawerItemsProps;
 

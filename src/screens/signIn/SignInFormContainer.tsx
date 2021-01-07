@@ -1,11 +1,11 @@
 import { Formik, FormikProps } from 'formik';
-import React from 'react';
-import firebase from 'react-native-firebase';
-import * as Yup from 'yup';
-
 import { i18n } from 'locale';
 import { Route } from 'navigation';
+import React from 'react';
+import firebase from 'react-native-firebase';
 import { NavigationService } from 'services';
+import * as Yup from 'yup';
+
 import { SignInForm } from './SignInForm';
 
 export interface SignInFormData {
@@ -66,6 +66,10 @@ export class SignInFormContainer extends React.PureComponent<{}, State> {
   }
 
   renderForm = (props: FormikProps<SignInFormData>) => (
-    <SignInForm {...props} loading={this.state.loading} navigateToResetPassword={this.navigateToResetPassword} />
+    <SignInForm
+      {...props}
+      loading={this.state.loading}
+      navigateToResetPassword={this.navigateToResetPassword}
+    />
   );
 }

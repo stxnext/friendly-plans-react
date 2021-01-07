@@ -1,6 +1,6 @@
+import { default as SliderRN } from '@react-native-community/slider'; // tslint:disable-line
 import React, { FC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { default as SliderRN } from '@react-native-community/slider'; // tslint:disable-line
 
 interface Props {
   min: number;

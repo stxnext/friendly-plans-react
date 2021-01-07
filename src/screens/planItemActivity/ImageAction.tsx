@@ -1,6 +1,5 @@
-import React, { SFC } from 'react';
-
 import { StyledText } from 'components';
+import React, { SFC } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { palette, typography } from 'styles';
 

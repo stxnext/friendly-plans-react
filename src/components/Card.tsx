@@ -1,6 +1,5 @@
 import React from 'react';
 import { RegisteredStyle, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
-
 import { dimensions, getElevation, palette } from 'styles';
 
 interface Props {

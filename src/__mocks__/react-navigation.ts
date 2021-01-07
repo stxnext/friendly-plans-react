@@ -4,7 +4,7 @@ const createDrawerNavigator = jest.fn();
 const createBottomTabNavigator = jest.fn();
 const createSwitchNavigator = jest.fn();
 const withNavigation = jest.fn();
-const withNavigationFocus = jest.fn(component => component);
+const withNavigationFocus = jest.fn((component) => component);
 
 const NavigationActions = {
   navigate: jest.fn(),

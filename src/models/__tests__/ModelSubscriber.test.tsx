@@ -1,4 +1,3 @@
-import React from 'react';
 import { OperationalError } from '../../infrastructure/Errors';
 import { ModelSubscriber } from '../ModelSubscriber';
 import { Plan } from '../Plan';
@@ -14,9 +13,11 @@ describe('ModelSubscriber', () => {
     const student = new Student();
     spyOn(student, 'getChildCollectionRef').and.returnValue(new RefMock());
 
-    subscriber.subscribeCollectionUpdates(student, elements => null);
+    subscriber.subscribeCollectionUpdates(student, (elements) => null);
 
-    expect(() => subscriber.subscribeCollectionUpdates(student, elements => null)).toThrow(OperationalError);
+    expect(() => subscriber.subscribeCollectionUpdates(student, (elements) => null)).toThrow(
+      OperationalError,
+    );
   });
 
   it(`should raise when trying to unsubscribe from collection updates when there is no subscription`, () => {
@@ -30,9 +31,9 @@ describe('ModelSubscriber', () => {
     const plan = new Plan();
     spyOn(plan, 'getRef').and.returnValue(new RefMock());
 
-    subscriber.subscribeElementUpdates(plan, elements => null);
+    subscriber.subscribeElementUpdates(plan, (elements) => null);
 
-    expect(() => subscriber.subscribeElementUpdates(plan, elements => null)).toThrow(OperationalError);
+    expect(() => subscriber.subscribeElementUpdates(plan, (elements) => null)).toThrow(OperationalError);
   });
 
   it(`should raise when trying to unsubscribe from element updates when there is no subscription`, () => {

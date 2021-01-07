@@ -1,7 +1,7 @@
+import { Card, IconButton, StyledText } from 'components';
 import React, { SFC } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { Card, IconButton, StyledText } from 'components';
 import { dimensions, palette, typography } from '../../styles';
 
 interface Props {

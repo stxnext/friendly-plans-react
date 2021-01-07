@@ -1,12 +1,12 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
 import { Card, FlatButton, StyledText } from 'components';
 import { i18n } from 'locale';
 import { ModelSubscriber, PlanItem, Student } from 'models';
 import { Route } from 'navigation';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NavigationInjectedProps } from 'react-navigation';
 import { palette, typography } from 'styles';
+
 import { PlanSlideItem } from './PlanSlideItem';
 
 interface State {
@@ -32,8 +32,8 @@ export class RunPlanSlideScreen extends React.PureComponent<NavigationInjectedPr
     const student = this.props.navigation.getParam('student');
     const plan = this.props.navigation.getParam('plan');
 
-    this.planItemsSubscriber.subscribeCollectionUpdates(plan, planItems => this.setState({ planItems }));
-    this.studentSubscriber.subscribeElementUpdates(student, updatedStudent =>
+    this.planItemsSubscriber.subscribeCollectionUpdates(plan, (planItems) => this.setState({ planItems }));
+    this.studentSubscriber.subscribeElementUpdates(student, (updatedStudent) =>
       this.setState({ student: updatedStudent }),
     );
   }
@@ -45,7 +45,7 @@ export class RunPlanSlideScreen extends React.PureComponent<NavigationInjectedPr
 
   nextPage = () => {
     if (this.state.pageNumber + 1 < this.state.planItems.length) {
-      this.setState(state => ({ pageNumber: state.pageNumber + 1 }));
+      this.setState((state) => ({ pageNumber: state.pageNumber + 1 }));
     } else {
       this.props.navigation.navigate(Route.Dashboard);
     }
@@ -90,17 +90,9 @@ const styles = StyleSheet.create({
     backgroundColor: palette.background,
     margin: 20,
   },
-  buttonContainer: {
-    flex: 1,
-    alignItems: 'center',
-  },
   button: {
     flex: 1,
     backgroundColor: palette.primaryVariant,
-  },
-  buttonText: {
-    color: palette.textWhite,
-    margin: 10,
   },
   planItem: {
     flex: 1,

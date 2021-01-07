@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-
 import { palette, typography } from 'styles';
+
 import { IconButton } from './IconButton';
 import { StyledText } from './StyledText';
 

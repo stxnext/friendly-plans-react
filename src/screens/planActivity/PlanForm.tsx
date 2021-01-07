@@ -1,11 +1,11 @@
-import { ErrorMessage, Formik, FormikProps } from 'formik';
-import React, { SFC } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
 import PlayButton, { Emoji, Icon, ModalTrigger, TextInput } from 'components';
+import { ErrorMessage, Formik, FormikProps } from 'formik';
 import { i18n } from 'locale';
 import { Plan } from 'models';
+import React, { SFC } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { dimensions, palette } from 'styles';
+
 import { DEFAULT_EMOJI } from '../../assets/emojis';
 import { IconSelectModal } from './IconSelectModal';
 import { ShuffleButton } from './ShuffleButton';
@@ -54,7 +54,10 @@ export const PlanForm: SFC<Props> = ({
       <View style={styles.container}>
         <View style={styles.inputContainer}>
           {plan ? (
-            <ModalTrigger title={'Wybierz ikonę'} modalContent={<IconSelectModal onEmojiSelect={updateEmoji} />}>
+            <ModalTrigger
+              title={'Wybierz ikonę'}
+              modalContent={<IconSelectModal onEmojiSelect={updateEmoji} />}
+            >
               <Emoji symbol={values.emoji} />
             </ModalTrigger>
           ) : (
@@ -79,7 +82,14 @@ export const PlanForm: SFC<Props> = ({
     );
   };
 
-  return <Formik initialValues={initialValues} onSubmit={onSubmit} render={renderFormControls} validate={onValidate} />;
+  return (
+    <Formik
+      initialValues={initialValues}
+      onSubmit={onSubmit}
+      render={renderFormControls}
+      validate={onValidate}
+    />
+  );
 };
 
 const styles = StyleSheet.create({

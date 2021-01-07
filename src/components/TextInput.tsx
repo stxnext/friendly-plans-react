@@ -7,7 +7,6 @@ import {
   TextInputProps,
   TextStyle,
 } from 'react-native';
-
 import { palette, typography } from 'styles';
 
 interface Props extends TextInputProps {
@@ -61,14 +60,14 @@ export class TextInput extends React.PureComponent<Props, State> {
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: 1,
-    borderBottomColor: 'transparent',
+    borderBottomColor: palette.transparent,
   },
   input: {
     height: 28,
     ...typography.subtitle,
     paddingVertical: 4,
     color: palette.textBlack,
-    borderBottomColor: 'transparent',
+    borderBottomColor: palette.transparent,
   },
   inputUnderline: {
     borderBottomColor: palette.primary,

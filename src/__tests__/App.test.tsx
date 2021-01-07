@@ -1,11 +1,10 @@
-import React from 'react';
-
 import { shallow } from 'enzyme';
-import { noop } from 'lodash';
-import { NavigationContainerComponent } from 'react-navigation';
-
 import * as locale from 'locale';
+import { noop } from 'lodash';
+import React from 'react';
+import { NavigationContainerComponent } from 'react-navigation';
 import { NavigationService } from 'services';
+
 import App from '../App';
 
 // @ts-ignore

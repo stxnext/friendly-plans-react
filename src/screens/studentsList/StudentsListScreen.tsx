@@ -1,12 +1,12 @@
-import React from 'react';
-import { BackHandler, StyleSheet } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
 import { IconButton, NarrowScreenTemplate } from 'components';
 import { i18n } from 'locale';
 import { AuthUser, ModelSubscriber, Student } from 'models';
 import { Route } from 'navigation';
+import React from 'react';
+import { BackHandler, StyleSheet } from 'react-native';
+import { NavigationInjectedProps } from 'react-navigation';
 import { dimensions, palette } from 'styles';
+
 import { StudentsList } from './StudentsList';
 
 interface State {
@@ -21,8 +21,9 @@ export class StudentsListScreen extends React.PureComponent<NavigationInjectedPr
   };
 
   componentDidMount() {
-    this.modelSubscriber.subscribeCollectionUpdates(AuthUser.getAuthenticatedUser(), (students: Student[]) =>
-      this.setState({ students }),
+    this.modelSubscriber.subscribeCollectionUpdates(
+      AuthUser.getAuthenticatedUser(),
+      (students: Student[]) => this.setState({ students }),
     );
     BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonPressAndroid);
   }

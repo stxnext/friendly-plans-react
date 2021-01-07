@@ -1,4 +1,5 @@
 import { RNFirebase } from 'react-native-firebase';
+
 import { OperationalError } from '../infrastructure/Errors';
 import { i18n } from '../locale';
 import { getPlanSubItemRef, getPlanSubItemsRef } from './FirebaseRefProxy';
@@ -37,7 +38,8 @@ export class PlanSubItem implements SubscribableModel, PlanElement {
 
   update = (changes: object) =>
     getPlanSubItemRef(this.studentId, this.planId, this.planItemId, this.id).update(changes);
-  delete = (): Promise<void> => getPlanSubItemRef(this.studentId, this.planId, this.planItemId, this.id).delete();
+  delete = (): Promise<void> =>
+    getPlanSubItemRef(this.studentId, this.planId, this.planItemId, this.id).delete();
 
   getChildCollectionRef: () => RNFirebase.firestore.CollectionReference = () => {
     throw new OperationalError('PlanSubItem does not have child collection');

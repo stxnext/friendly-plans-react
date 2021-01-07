@@ -1,7 +1,13 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-import { EllipseBlueBig, LeafBlue, LeafNavyBlue, LeafNavyBlueSmall, LeafOrange } from '../../assets/images/icons';
+import {
+  EllipseBlueBig,
+  LeafBlue,
+  LeafNavyBlue,
+  LeafNavyBlueSmall,
+  LeafOrange,
+} from '../../assets/images/icons';
 
 export class SignUpBackground extends React.PureComponent {
   render() {
