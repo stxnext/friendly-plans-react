@@ -22,7 +22,7 @@ export const ImagePickerModal: SFC<Props> = ({ closeModal = noop, planItem }) =>
     });
   };
 
-  const takePhotoHandler = async () => {
+  const takePhotoHandler = () => {
     ImagePicker.openCamera({
       width: 300,
       height: 400,
