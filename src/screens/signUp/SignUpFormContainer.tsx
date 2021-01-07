@@ -1,11 +1,10 @@
 import { Formik, FormikProps } from 'formik';
-import React from 'react';
-import firebase from 'react-native-firebase';
-import * as Yup from 'yup';
-
 import { i18n } from 'locale';
 import { Route } from 'navigation';
+import React from 'react';
+import firebase from 'react-native-firebase';
 import { FirebaseService, NavigationService } from 'services';
+import * as Yup from 'yup';
 
 import { SignUpForm } from './SignUpForm';
 
@@ -54,12 +53,16 @@ export class SignUpFormContainer extends React.PureComponent<{}, State> {
     );
   }
 
-  renderForm = (props: FormikProps<SignUpFormData>) => <SignUpForm {...props} loading={this.state.loading} />;
+  renderForm = (props: FormikProps<SignUpFormData>) => (
+    <SignUpForm {...props} loading={this.state.loading} />
+  );
 
   onSubmit = async (values: SignUpFormData) => {
     this.setState({ loading: true });
     try {
-      const userCredentials = await firebase.auth().createUserWithEmailAndPassword(values.email, values.password);
+      const userCredentials = await firebase
+        .auth()
+        .createUserWithEmailAndPassword(values.email, values.password);
       if (userCredentials.user) {
         userCredentials.user.updateProfile({ displayName: values.name });
 

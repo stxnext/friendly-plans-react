@@ -1,7 +1,6 @@
+import { Icon } from 'components';
 import React, { SFC } from 'react';
 import { FloatingAction } from 'react-native-floating-action';
-
-import { Icon } from 'components';
 import { palette } from 'styles';
 
 interface Props {

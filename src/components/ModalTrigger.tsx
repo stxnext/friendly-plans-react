@@ -2,6 +2,7 @@ import { i18n } from 'locale';
 import React, { ReactElement, SFC, useState } from 'react';
 import { Modal, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { dimensions, getElevation, palette, typography } from 'styles';
+
 import { IconButton } from './IconButton';
 import { StyledText } from './StyledText';
 

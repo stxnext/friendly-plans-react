@@ -1,10 +1,9 @@
-import React from 'react';
-import { Alert } from 'react-native';
-import firebase from 'react-native-firebase';
-
 import { FlatButton } from 'components';
 import { i18n } from 'locale';
 import { Route } from 'navigation';
+import React from 'react';
+import { Alert } from 'react-native';
+import firebase from 'react-native-firebase';
 import { NavigationService } from 'services';
 
 interface State {

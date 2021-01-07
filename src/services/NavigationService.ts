@@ -1,6 +1,5 @@
-import { NavigationActions, NavigationContainerComponent, NavigationState } from 'react-navigation';
-
 import { DialogProps } from 'models';
+import { NavigationActions, NavigationContainerComponent, NavigationState } from 'react-navigation';
 
 interface ScreenProps extends Partial<DialogProps> {
   [property: string]: any;

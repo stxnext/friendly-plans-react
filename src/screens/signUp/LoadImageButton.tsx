@@ -1,8 +1,7 @@
-import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
-
 import { Button, Icon } from 'components';
 import { i18n } from 'locale';
+import React from 'react';
+import { Image, StyleSheet, View } from 'react-native';
 import { palette } from 'styles';
 
 interface Props {
@@ -48,7 +47,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     height: 44,
     width: 210,
-    backgroundColor: 'white',
+    backgroundColor: palette.white,
   },
   titleButton: {
     color: palette.primary,

@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
+import { navigationMock } from 'helpers';
 import React from 'react';
 
-import { navigationMock } from 'helpers';
 import { PlanActivityScreen } from '../PlanActivityScreen';
 
 jest.mock('models/ModelSubscriber', () => ({

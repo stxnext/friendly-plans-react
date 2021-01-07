@@ -1,10 +1,10 @@
+import { FullScreenTemplate } from 'components';
+import { ModelSubscriber, Plan, Student } from 'models';
+import { Route } from 'navigation';
 import React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 
-import { FullScreenTemplate } from 'components';
-import { ModelSubscriber, Plan, Student } from 'models';
-import { Route } from 'navigation';
 import EmptyStudentPlans from './EmptyStudentPlans';
 import { FixedCreatePlanButton } from './FixedCreatePlanButton';
 import StudentPlanListItem from './StudentPlanListItem';
@@ -24,7 +24,9 @@ export class StudentPlanList extends React.PureComponent<Props, State> {
   };
 
   subscribeToPlans() {
-    this.plansSubscriber.subscribeCollectionUpdates(this.props.student, plans => this.setState({ plans }));
+    this.plansSubscriber.subscribeCollectionUpdates(this.props.student, (plans) =>
+      this.setState({ plans }),
+    );
   }
 
   unsubsribeToPlans() {
@@ -46,7 +48,9 @@ export class StudentPlanList extends React.PureComponent<Props, State> {
 
   extractKey = (plan: Plan) => plan.id;
 
-  renderItem = ({ item }: { item: Plan }) => <StudentPlanListItem plan={item} student={this.props.student} />;
+  renderItem = ({ item }: { item: Plan }) => (
+    <StudentPlanListItem plan={item} student={this.props.student} />
+  );
 
   navigateToCreatePlan = () => {
     const student = this.props.navigation.getParam('student');

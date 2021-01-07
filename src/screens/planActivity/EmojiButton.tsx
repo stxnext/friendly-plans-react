@@ -1,6 +1,5 @@
-import React, { SFC } from 'react';
-
 import { Emoji } from 'components';
+import React, { SFC } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 interface Props {

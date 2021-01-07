@@ -1,4 +1,5 @@
 import { RNFirebase } from 'react-native-firebase';
+
 import { getAuthenticatedUserId, getStudentsRef, getUserRef } from './FirebaseRefProxy';
 import { Student } from './Student';
 import { ParameterlessConstructor, SubscribableModel } from './SubscribableModel';

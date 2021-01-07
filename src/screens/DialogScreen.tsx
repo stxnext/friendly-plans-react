@@ -1,11 +1,9 @@
-import React from 'react';
-
+import { ModalTemplate, StyledText } from 'components';
 import { noop } from 'lodash';
+import { DialogProps } from 'models';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationInjectedProps } from 'react-navigation';
-
-import { ModalTemplate, StyledText } from 'components';
-import { DialogProps } from 'models';
 import { typography } from 'styles';
 
 type State = DialogProps;

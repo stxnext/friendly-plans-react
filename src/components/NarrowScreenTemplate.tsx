@@ -1,8 +1,8 @@
 import React from 'react';
 import { Animated, Dimensions, ScrollView, StyleSheet, View } from 'react-native';
 import { NavigationInjectedProps } from 'react-navigation';
-
 import { dimensions, getElevation, headerHeight, palette, typography } from 'styles';
+
 import { IconButton } from './IconButton';
 import { StyledText } from './StyledText';
 
@@ -78,7 +78,11 @@ export class NarrowScreenTemplate extends React.PureComponent<Props> {
             {this.renderTitle()}
             {buttons}
           </View>
-          <ScrollView bounces={false} alwaysBounceVertical={false} contentContainerStyle={styles.contentContainer}>
+          <ScrollView
+            bounces={false}
+            alwaysBounceVertical={false}
+            contentContainerStyle={styles.contentContainer}
+          >
             {children}
           </ScrollView>
         </Animated.View>
@@ -117,9 +121,5 @@ const styles = StyleSheet.create({
     backgroundColor: palette.background,
     paddingVertical: dimensions.spacingMedium,
     paddingHorizontal: dimensions.spacingBig,
-  },
-  footer: {
-    flexDirection: 'row',
-    marginTop: 12,
   },
 });

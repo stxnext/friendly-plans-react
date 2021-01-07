@@ -1,10 +1,9 @@
-import React from 'react';
-import { StyleSheet, TouchableHighlight, View } from 'react-native';
-import firebase from 'react-native-firebase';
-
 import { Icon } from 'components';
 import { i18n } from 'locale';
 import { Route } from 'navigation';
+import React from 'react';
+import { StyleSheet, TouchableHighlight, View } from 'react-native';
+import firebase from 'react-native-firebase';
 import { NavigationService } from 'services';
 import { palette } from 'styles';
 

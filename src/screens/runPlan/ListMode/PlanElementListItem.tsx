@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet, TouchableHighlight, View, ViewStyle } from 'react-native';
-
 import { Card, PlanNameText } from 'components';
 import { Plan, PlanElement, PlanItem, PlanItemType, Student } from 'models';
 import { Route } from 'navigation';
+import React from 'react';
+import { StyleSheet, TouchableHighlight, View, ViewStyle } from 'react-native';
 import { NavigationService } from 'services';
 import { palette } from 'styles';
+
 import { PlanItemTimer } from '../PlanItemTimer';
 
 interface Props {
@@ -55,7 +55,11 @@ export class PlanElementListItem extends React.PureComponent<Props> {
 
   render() {
     return (
-      <TouchableHighlight underlayColor={palette.underlay} style={styles.touchable} onPress={this.handlePress()}>
+      <TouchableHighlight
+        underlayColor={palette.underlay}
+        style={styles.touchable}
+        onPress={this.handlePress()}
+      >
         <Card style={this.container()}>
           <View style={this.container()}>
             <PlanNameText
@@ -87,10 +91,6 @@ const styles = StyleSheet.create({
     flex: 5,
     color: palette.textWhite,
     textAlignVertical: 'center',
-  },
-  card: {
-    flex: 1,
-    margin: 0,
   },
   container: {
     backgroundColor: palette.background,

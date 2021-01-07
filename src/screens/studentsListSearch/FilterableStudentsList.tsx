@@ -10,12 +10,12 @@ interface Props {
 
 export const FilterableStudentsList: SFC<Props> = ({ students, searchQuery }) => {
   const filteredStudents: Student[] = students
-    .filter(student => student.name.match(new RegExp(searchQuery, 'i')))
+    .filter((student) => student.name.match(new RegExp(searchQuery, 'i')))
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <View>
-      {filteredStudents.map(student => (
+      {filteredStudents.map((student) => (
         <StudentListElement student={student} key={student.id} />
       ))}
     </View>

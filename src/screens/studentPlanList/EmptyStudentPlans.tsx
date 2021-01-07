@@ -1,10 +1,10 @@
 import { i18n } from 'locale';
+import { Route } from 'navigation';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 import { palette } from 'styles';
 
-import { Route } from 'navigation';
 import { StyledText } from '../../components';
 import { CopyPlanButton } from './CopyPlanButton';
 import { CreatePlanButton } from './CreatePlanButton';

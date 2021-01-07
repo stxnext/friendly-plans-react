@@ -1,8 +1,6 @@
+import { Header } from 'components';
 import React from 'react';
 import { createStackNavigator, HeaderProps } from 'react-navigation';
-
-import { Header } from 'components';
-
 import {
   DashboardScreen,
   ImageLibraryScreen,
@@ -12,6 +10,7 @@ import {
   RunPlanSlideScreen,
   RunSubPlanListScreen,
 } from 'screens';
+
 import { Route } from './routes';
 
 export const MainStackNavigator = createStackNavigator(

@@ -1,10 +1,9 @@
+import { FullScreenTemplate } from 'components';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationInjectedProps } from 'react-navigation';
-
-import { FullScreenTemplate } from 'components';
-
 import { palette } from 'styles';
+
 import { SignUpBackground } from './SignUpBackground';
 import { SignUpFormContainer } from './SignUpFormContainer';
 

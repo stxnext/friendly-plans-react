@@ -1,9 +1,8 @@
+import { Button, FlatButton, InputItem } from 'components';
 import { FormikProps } from 'formik';
+import { i18n } from 'locale';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-
-import { Button, FlatButton, InputItem } from 'components';
-import { i18n } from 'locale';
 import { palette, typography } from 'styles';
 
 import { SignInFormData } from './SignInFormContainer';
@@ -68,10 +67,6 @@ export class SignInForm extends React.PureComponent<Props> {
 }
 
 const styles = StyleSheet.create({
-  buttonContainer: {
-    marginTop: 8,
-    marginBottom: 20,
-  },
   button: {
     borderRadius: 12,
     height: 44,

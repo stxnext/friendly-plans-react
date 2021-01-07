@@ -1,10 +1,9 @@
 import React, { SFC } from 'react';
 import { StyleSheet } from 'react-native';
 import { Button as ElementsButton, ButtonProps } from 'react-native-elements';
-
 import { palette, typography } from 'styles';
 
-export const FlatButton: SFC<ButtonProps> = props => (
+export const FlatButton: SFC<ButtonProps> = (props) => (
   <ElementsButton
     {...props}
     loadingProps={{ color: palette.primary }}
@@ -19,7 +18,7 @@ FlatButton.displayName = 'FlatButton';
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: 'transparent',
+    backgroundColor: palette.transparent,
     elevation: 0,
     height: 36,
   },
@@ -29,7 +28,7 @@ const styles = StyleSheet.create({
     ...typography.button,
   },
   buttonDisabled: {
-    backgroundColor: 'transparent',
+    backgroundColor: palette.transparent,
   },
   titleDisabled: {
     color: palette.textDisabled,

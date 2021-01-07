@@ -1,10 +1,10 @@
-import React from 'react';
-import { createStackNavigator } from 'react-navigation';
-
 import { Icon } from 'components';
 import { i18n } from 'locale';
+import React from 'react';
+import { createStackNavigator } from 'react-navigation';
 import { ResetPasswordScreen, SignInScreen, SignUpScreen } from 'screens';
 import { headerStyle, palette } from 'styles';
+
 import { Route } from './routes';
 
 export const UnauthenticatedStackNavigator = createStackNavigator(

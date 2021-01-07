@@ -1,5 +1,6 @@
 import { RNFirebase } from 'react-native-firebase';
 import { PlanItemFormData } from 'screens/planItemActivity/PlanItemForm';
+
 import { i18n } from '../locale';
 import { getPlanItemRef, getPlanItemsRef, getPlanSubItemsRef } from './FirebaseRefProxy';
 import { Plan } from './Plan';
@@ -118,5 +119,6 @@ export class PlanItem implements SubscribableModel, PlanElement {
   getChildCollectionRef: () => RNFirebase.firestore.CollectionReference = () =>
     getPlanSubItemsRef(this.studentId, this.planId, this.id);
   getChildType: () => ParameterlessConstructor<SubscribableModel> = () => PlanSubItem;
-  getRef: () => RNFirebase.firestore.DocumentReference = () => getPlanItemRef(this.studentId, this.planId, this.id);
+  getRef: () => RNFirebase.firestore.DocumentReference = () =>
+    getPlanItemRef(this.studentId, this.planId, this.id);
 }

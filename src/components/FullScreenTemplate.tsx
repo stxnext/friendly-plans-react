@@ -1,6 +1,5 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
-
 import { palette } from 'styles';
 
 interface Props {
@@ -17,7 +16,11 @@ export class FullScreenTemplate extends React.PureComponent<Props> {
     return (
       <SafeAreaView style={[styles.safeArea, darkBackground && styles.darkBackground, extraStyles]}>
         <ScrollView
-          contentContainerStyle={[styles.contentContainer, padded && styles.padded, narrow && styles.narrowContainer]}
+          contentContainerStyle={[
+            styles.contentContainer,
+            padded && styles.padded,
+            narrow && styles.narrowContainer,
+          ]}
         >
           <View style={[styles.contentContainer, narrow && styles.narrow]}>{children}</View>
         </ScrollView>

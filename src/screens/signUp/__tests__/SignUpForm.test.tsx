@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-
 import { NavigationService } from 'services';
+
 import { SignUpForm } from '../SignUpForm';
 
 describe('SignUpForm', () => {

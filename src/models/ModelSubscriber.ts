@@ -1,4 +1,5 @@
 import { RNFirebase } from 'react-native-firebase';
+
 import { OperationalError } from '../infrastructure/Errors';
 import { SubscribableModel } from './SubscribableModel';
 
@@ -52,9 +53,9 @@ export class ModelSubscriber<T> {
     parent: SubscribableModel,
     callback: (elements: T[]) => void,
   ): ((querySnapshot: RNFirebase.firestore.QuerySnapshot) => void) => {
-    return querySnapshot => {
+    return (querySnapshot) => {
       const ChildType = parent.getChildType();
-      const elements: T[] = querySnapshot.docs.map(document => {
+      const elements: T[] = querySnapshot.docs.map((document) => {
         return Object.assign(new ChildType(), {
           id: document.id,
           ...document.data(),
@@ -68,7 +69,7 @@ export class ModelSubscriber<T> {
     element: SubscribableModel,
     callback: (element: T) => void,
   ): ((document: RNFirebase.firestore.DocumentSnapshot) => void) => {
-    return document => {
+    return (document) => {
       if (document.exists) {
         const updatedElement = Object.assign(new element.constructor(), {
           id: document.id,

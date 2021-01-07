@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
+import { navigationMock } from 'helpers';
+import { i18n } from 'locale';
 import React from 'react';
 import { Text } from 'react-native';
 
-import { navigationMock } from 'helpers';
-import { i18n } from 'locale';
 import { ModalTemplate } from '../ModalTemplate';
 
 describe('ModalTemplate', () => {

@@ -6,7 +6,6 @@ import { Route } from 'navigation';
 import React, { SFC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ImagePicker from 'react-native-image-crop-picker';
-
 import { NavigationService } from 'services';
 import { dimensions } from 'styles';
 

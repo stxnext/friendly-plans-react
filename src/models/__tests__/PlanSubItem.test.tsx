@@ -1,4 +1,3 @@
-import React from 'react';
 import { OperationalError } from '../../infrastructure/Errors';
 import { PlanItem, PlanItemType } from '../PlanItem';
 import { PlanSubItem } from '../PlanSubItem';

@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
 import { IconButton, NarrowScreenTemplate, TextInput } from 'components';
 import { i18n } from 'locale';
 import { Student } from 'models';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { NavigationInjectedProps } from 'react-navigation';
 import { dimensions, palette } from 'styles';
+
 import { FilterableStudentsList } from './FilterableStudentsList';
 
 interface Props extends NavigationInjectedProps {
@@ -44,7 +44,13 @@ export class StudentsListSearchScreen extends React.PureComponent<Props, State> 
     }
 
     return (
-      <IconButton type="material" name="close" size={24} color={palette.textBody} onPress={this.onSearchInputClear} />
+      <IconButton
+        type="material"
+        name="close"
+        size={24}
+        color={palette.textBody}
+        onPress={this.onSearchInputClear}
+      />
     );
   };
 

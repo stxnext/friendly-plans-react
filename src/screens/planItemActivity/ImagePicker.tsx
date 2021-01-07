@@ -1,10 +1,10 @@
-import React, { SFC } from 'react';
-import { StyleSheet, View } from 'react-native';
-
 import { Icon, ModalTrigger } from 'components';
 import { i18n } from 'locale';
 import { PlanItem } from 'models';
+import React, { SFC } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { palette } from 'styles';
+
 import { ImagePickerModal } from './ImagePickerModal';
 
 interface Props {
@@ -13,7 +13,10 @@ interface Props {
 
 export const ImagePicker: SFC<Props> = ({ planItem }) => (
   <View style={styles.container}>
-    <ModalTrigger modalContent={<ImagePickerModal planItem={planItem} />} title={i18n.t('planItemActivity:addImage')}>
+    <ModalTrigger
+      modalContent={<ImagePickerModal planItem={planItem} />}
+      title={i18n.t('planItemActivity:addImage')}
+    >
       <View style={styles.imagePicker}>
         <Icon name="add-a-photo" type="material" size={82} color={palette.textInputPlaceholder} />
       </View>

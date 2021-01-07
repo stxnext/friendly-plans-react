@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
+import { navigationMock } from 'helpers';
 import React from 'react';
 import firebase from 'react-native-firebase';
 import SplashScreen from 'react-native-splash-screen';
 
-import { navigationMock } from 'helpers';
 import { WelcomeScreen } from '../WelcomeScreen';
 
 describe('WelcomeScreen', () => {

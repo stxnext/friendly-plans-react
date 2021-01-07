@@ -1,5 +1,4 @@
 import firebase from 'react-native-firebase';
-import { Image } from 'react-native-image-crop-picker';
 
 export class FirebaseService {
   /* Upload image to Firebase Storage and return public URL to download it. */

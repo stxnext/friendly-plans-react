@@ -1,10 +1,9 @@
+import { Button, InputItem } from 'components';
 import { FormikProps } from 'formik';
+import { i18n } from 'locale';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import ImagePicker, { Image } from 'react-native-image-crop-picker';
-
-import { Button, InputItem } from 'components';
-import { i18n } from 'locale';
 import { NavigationService } from 'services';
 import { palette } from 'styles';
 

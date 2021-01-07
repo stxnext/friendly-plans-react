@@ -1,7 +1,7 @@
+import { i18n } from 'locale';
 import React, { SFC } from 'react';
 import { StyleSheet } from 'react-native';
 
-import { i18n } from 'locale';
 import { FlatButton } from '../../components';
 import { dimensions, palette } from '../../styles';
 
@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     marginRight: dimensions.spacingBig,
   },
   iconDisabled: {
-    backgroundColor: 'transparent',
+    backgroundColor: palette.transparent,
   },
 });

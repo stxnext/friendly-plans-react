@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { NavigationInjectedProps, withNavigationFocus } from 'react-navigation';
-
 import { i18n } from 'locale';
 import { AuthUser, ModelSubscriber, Student } from 'models';
 import { Route } from 'navigation';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { NavigationInjectedProps, withNavigationFocus } from 'react-navigation';
 import { palette } from 'styles';
+
 import StudentPlanList from '../studentPlanList/StudentPlanList';
 
 interface Props extends NavigationInjectedProps {
@@ -35,14 +35,17 @@ export class DashboardScreen extends React.PureComponent<Props, State> {
   studentSubscriber: ModelSubscriber<Student> = new ModelSubscriber();
 
   componentDidMount() {
-    this.userSubscriber.subscribeElementUpdates(AuthUser.getAuthenticatedUser(), async user => {
+    this.userSubscriber.subscribeElementUpdates(AuthUser.getAuthenticatedUser(), async (user) => {
       const currentStudentId = await user.getCurrentStudent();
       this.setState({ currentStudentId });
     });
 
-    this.studentSubscriber.subscribeCollectionUpdates(AuthUser.getAuthenticatedUser(), async (students: Student[]) => {
-      this.setState({ students, isInitialized: true });
-    });
+    this.studentSubscriber.subscribeCollectionUpdates(
+      AuthUser.getAuthenticatedUser(),
+      async (students: Student[]) => {
+        this.setState({ students, isInitialized: true });
+      },
+    );
   }
 
   componentDidUpdate(prevProps: Props, prevState: State): void {

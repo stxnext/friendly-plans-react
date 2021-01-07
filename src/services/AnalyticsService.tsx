@@ -1,7 +1,7 @@
+import { User } from 'models';
 import firebase from 'react-native-firebase';
 import { NavigationState } from 'react-navigation';
 
-import { User } from 'models';
 import NavigationService from './NavigationService';
 
 export default class AnalyticsService {

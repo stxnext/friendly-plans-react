@@ -1,9 +1,8 @@
-import React, { SFC } from 'react';
-import { StyleSheet, TouchableHighlight } from 'react-native';
-
 import { StyledText } from 'components';
 import { AuthUser, Student } from 'models';
 import { Route } from 'navigation';
+import React, { SFC } from 'react';
+import { StyleSheet, TouchableHighlight } from 'react-native';
 import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 import { dimensions, palette, typography } from 'styles';
 
@@ -20,7 +19,11 @@ const StudentName: SFC<Props> = ({ student, navigation }) => {
   };
 
   return (
-    <TouchableHighlight style={styles.touchable} underlayColor={palette.underlay} onPress={setCurrentStudent}>
+    <TouchableHighlight
+      style={styles.touchable}
+      underlayColor={palette.underlay}
+      onPress={setCurrentStudent}
+    >
       <StyledText style={styles.studentName}>{student.name}</StyledText>
     </TouchableHighlight>
   );

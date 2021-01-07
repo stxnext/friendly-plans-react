@@ -1,10 +1,9 @@
-import React from 'react';
-import { Alert } from 'react-native';
-import { NavigationInjectedProps } from 'react-navigation';
-
 import { NarrowScreenTemplate, StudentSettings } from 'components';
 import { i18n } from 'locale';
 import { AuthUser, ModelSubscriber, Student, StudentData } from 'models';
+import React from 'react';
+import { Alert } from 'react-native';
+import { NavigationInjectedProps } from 'react-navigation';
 
 interface State {
   student: Student;
@@ -22,7 +21,7 @@ export class StudentSettingsScreen extends React.PureComponent<NavigationInjecte
 
   componentDidMount() {
     const student = this.props.navigation.getParam('student');
-    this.studentSubscriber.subscribeElementUpdates(student, updatedStudent =>
+    this.studentSubscriber.subscribeElementUpdates(student, (updatedStudent) =>
       this.setState({ student: updatedStudent }),
     );
   }

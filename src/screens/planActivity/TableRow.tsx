@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react';
-
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-
 import { CheckboxInput, Icon, IconButton } from 'components';
 import { PlanItem } from 'models';
 import { Route } from 'navigation';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { NavigationService } from 'services';
 import { palette, typography } from 'styles';
 
@@ -23,7 +21,7 @@ export const TableRow: React.FunctionComponent<Props> = ({ planItem, border, dra
       planItem
         .getChildCollectionRef()
         .get()
-        .then(snap => setSubtaskCount(snap.size));
+        .then((snap) => setSubtaskCount(snap.size));
     }
   });
 
@@ -89,10 +87,6 @@ const styles = StyleSheet.create({
   textName: {
     ...typography.body,
     color: palette.textGray,
-  },
-  cell: {
-    alignSelf: 'stretch',
-    justifyContent: 'center',
   },
   deleteIcon: {
     position: 'absolute',

@@ -1,7 +1,6 @@
 import React, { SFC } from 'react';
 import { StyleSheet } from 'react-native';
 import { Button as ElementsButton, ButtonProps } from 'react-native-elements';
-
 import { dimensions, palette, typography } from 'styles';
 
 interface Props extends ButtonProps {
@@ -14,7 +13,12 @@ export const Button: SFC<Props> = ({ backgroundColor, isUppercase, icon, ...prop
     {...props}
     icon={icon}
     buttonStyle={[styles.button, !!icon && styles.buttonWithIcon, { backgroundColor }, props.buttonStyle]}
-    titleStyle={[styles.title, !!icon && styles.titleWithIcon, isUppercase && styles.uppercase, props.titleStyle]}
+    titleStyle={[
+      styles.title,
+      !!icon && styles.titleWithIcon,
+      isUppercase && styles.uppercase,
+      props.titleStyle,
+    ]}
   />
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Switch, View } from 'react-native';
-
 import { dimensions, palette, typography } from 'styles';
+
 import { StyledText } from './StyledText';
 
 interface Props {

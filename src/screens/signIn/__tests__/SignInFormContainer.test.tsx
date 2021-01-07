@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import firebase from 'react-native-firebase';
-
 import { NavigationService } from 'services';
+
 import { SignInFormContainer } from '../SignInFormContainer';
 
 describe('SignInFormContainer', () => {

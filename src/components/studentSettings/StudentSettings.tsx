@@ -1,8 +1,7 @@
-import React from 'react';
-import { StyleSheet } from 'react-native';
-
 import { i18n } from 'locale';
 import { Student, StudentData, StudentDisplayOption, StudentTextSizeOption } from 'models';
+import React from 'react';
+import { StyleSheet } from 'react-native';
 import { dimensions, palette, typography } from 'styles';
 
 import { FlatButton } from '../FlatButton';
@@ -51,7 +50,8 @@ export class StudentSettings extends React.PureComponent<Props, State> {
 
   onTextCaseChange = (isUpperCase: boolean) => this.setState({ isUpperCase }, this.onStudentUpdate);
 
-  onSwipeBlockedChange = (isSwipeBlocked: boolean) => this.setState({ isSwipeBlocked }, this.onStudentUpdate);
+  onSwipeBlockedChange = (isSwipeBlocked: boolean) =>
+    this.setState({ isSwipeBlocked }, this.onStudentUpdate);
 
   onStudentCreate = () => this.props.onStudentCreate!(this.state);
 
@@ -70,14 +70,22 @@ export class StudentSettings extends React.PureComponent<Props, State> {
           onChangeText={this.handleNameChange}
         />
         <Separator extraWide />
-        <StyledText style={[styles.label, styles.taskViewLabel]}>{i18n.t('studentSettings:taskView')}</StyledText>
-        <PlanDisplayPreview displaySettings={displaySettings} textSize={textSize} isUpperCase={isUpperCase} />
+        <StyledText style={[styles.label, styles.taskViewLabel]}>
+          {i18n.t('studentSettings:taskView')}
+        </StyledText>
+        <PlanDisplayPreview
+          displaySettings={displaySettings}
+          textSize={textSize}
+          isUpperCase={isUpperCase}
+        />
         <DisplaySetting value={displaySettings} onValueChange={this.onDisplaySettingsChange} />
         <TextSizeSetting value={textSize} onValueChange={this.onTextSizeChange} />
         <TextCaseSetting value={isUpperCase} onValueChange={this.onTextCaseChange} />
         <SlideCardSetting value={isSwipeBlocked} onValueChange={this.onSwipeBlockedChange} />
         <Separator extraWide />
-        <StyledText style={[styles.label, styles.taskViewLabel]}>{i18n.t('studentSettings:soundSettings')}</StyledText>
+        <StyledText style={[styles.label, styles.taskViewLabel]}>
+          {i18n.t('studentSettings:soundSettings')}
+        </StyledText>
         <AlarmSoundSetting value="Beep" />
         <Separator extraWide />
 
@@ -89,7 +97,10 @@ export class StudentSettings extends React.PureComponent<Props, State> {
           />
         )}
         {!!onStudentRemove && (
-          <FlatButton title={i18n.t('studentSettings:removeStudent')} onPress={this.props.onStudentRemove} />
+          <FlatButton
+            title={i18n.t('studentSettings:removeStudent')}
+            onPress={this.props.onStudentRemove}
+          />
         )}
       </>
     );

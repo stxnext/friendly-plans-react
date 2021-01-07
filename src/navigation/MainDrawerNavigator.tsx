@@ -1,7 +1,7 @@
-import { createDrawerNavigator } from 'react-navigation';
-
 import { DrawerContent } from 'components';
+import { createDrawerNavigator } from 'react-navigation';
 import { palette } from 'styles';
+
 import { MainStackNavigator } from './MainStackNavigator';
 import { Route } from './routes';
 

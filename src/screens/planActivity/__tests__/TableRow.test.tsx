@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
+import { PlanItem } from 'models';
 import React from 'react';
 
-import { PlanItem } from 'models';
 import { TableRow } from '../TableRow';
 
 const props = {

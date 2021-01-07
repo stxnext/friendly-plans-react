@@ -1,9 +1,9 @@
-import React, { SFC } from 'react';
-import { NavigationInjectedProps, withNavigation } from 'react-navigation';
-
 import { Plan, StudentDisplayOption } from 'models';
 import { Route } from 'navigation';
+import React, { SFC } from 'react';
+import { NavigationInjectedProps, withNavigation } from 'react-navigation';
 import { palette } from 'styles';
+
 import { IconButton } from './IconButton';
 
 interface Props extends NavigationInjectedProps {
