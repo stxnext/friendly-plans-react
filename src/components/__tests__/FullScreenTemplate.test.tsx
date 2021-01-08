@@ -8,6 +8,7 @@ describe('FullScreenTemplate', () => {
   const props = {
     padded: true,
     children: <Text>Child text</Text>,
+    noScrollView: false,
   };
 
   it('should match snapshot', () => {

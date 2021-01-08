@@ -30,7 +30,7 @@ export const TaskTable: SFC<Props> = ({ planItemList, handlePlanListOrderChanged
 
   const keyExtractor = (item: PlanItem) => `draggable-item-${item.id}`;
   return (
-    <FullScreenTemplate darkBackground extraStyles={styles.fullScreen}>
+    <FullScreenTemplate darkBackground extraStyles={styles.fullScreen} noScrollView>
       <DraggableFlatList
         data={data}
         renderItem={renderItem}

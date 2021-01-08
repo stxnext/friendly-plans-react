@@ -70,7 +70,7 @@ export class StudentPlanList extends React.PureComponent<Props, State> {
 
     return (
       <>
-        <FullScreenTemplate padded darkBackground>
+        <FullScreenTemplate padded darkBackground noScrollView>
           <FlatList
             data={this.state.plans}
             renderItem={this.renderItem}
