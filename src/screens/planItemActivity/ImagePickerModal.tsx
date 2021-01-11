@@ -6,7 +6,7 @@ import { Route } from 'navigation';
 import React, { SFC } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ImagePicker from 'react-native-image-crop-picker';
-import { NavigationService } from 'services';
+import { NavigationService, FirebaseService } from 'services';
 import { dimensions } from 'styles';
 
 interface Props {
@@ -38,9 +38,15 @@ export const ImagePickerModal: SFC<Props> = ({ closeModal = noop, planItem }) =>
       width: 300,
       height: 400,
       cropping: true,
-    }).then((image: any) => {
+    }).then(async (image: any) => {
       closeModal();
-      // SEND TO SERVER?
+      const imagePath = image.path;
+      if (planItem) {
+        planItem.update({ image: imagePath });
+        await FirebaseService.uploadPlanItemImage(imagePath, planItem.planId);
+        console.log('update');
+      } else {
+      }
     });
   };
 

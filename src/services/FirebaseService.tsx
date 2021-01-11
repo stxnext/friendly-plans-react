@@ -16,4 +16,12 @@ export class FirebaseService {
     const photoURL = await FirebaseService.uploadUserImage(image);
     return firebase.auth().currentUser!.updateProfile({ photoURL });
   };
+
+  static uploadPlanItemImage = async (image: string, planId: string): Promise<void> => {
+    const imageRef = firebase
+      .storage()
+      .ref('planItems')
+      .child(planId);
+    await imageRef.putFile(image);
+  };
 }

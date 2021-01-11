@@ -1,8 +1,8 @@
 import { Card, IconButton, ModalTrigger, TextInput } from 'components';
 import { FormikProps } from 'formik';
 import { i18n } from 'locale';
-import { PlanElement, PlanItem, Student } from 'models';
-import React, { useState } from 'react';
+import { PlanItem } from 'models';
+import React from 'react';
 import { SafeAreaView, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 import { dimensions, palette, typography } from 'styles';
 
